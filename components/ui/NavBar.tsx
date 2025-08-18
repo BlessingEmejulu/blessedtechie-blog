@@ -15,7 +15,6 @@ export default function NavBar() {
   return (
     <nav
       className="border-t-4 border-transparent bg-white
-                 bg-gradient-to-r from-[#8E63C8] via-[#4BAE77] to-[#FFD765]
                  bg-[length:100%_4px] bg-top bg-no-repeat 
                  flex items-center justify-between px-6 py-3"
     >
@@ -27,7 +26,8 @@ export default function NavBar() {
           width={40}
           height={40}
           className="rounded"
-        />
+        /> 
+        {/* <p>BlessedTechie</p> */}
       </div>
 
       {/* Links + Toggle */}
