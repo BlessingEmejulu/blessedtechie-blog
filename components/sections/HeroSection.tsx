@@ -3,8 +3,7 @@ import { Linkedin, Github, Facebook, X } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col-reverse items-center gap-8 px-4 py-12 md:flex-row md:justify-between md:gap-16 md:px-8 lg:px-20">
-      {/* Left: Text Content */}
+ <section className="flex  flex-col items-center gap-8 px-4 py-12 md:flex-row md:gap-16 md:px-8 lg:px-20">      {/* Left: Text Content */}
       <div className="max-w-xl w-full">
         <h1 className="text-4xl font-bold text-purple-800 mb-2 md:text-5xl lg:text-6xl">
           I'm Blessing
@@ -31,12 +30,12 @@ export default function HeroSection() {
         </div>
       </div>
       {/* Right: Profile Image */}
-      <div className="w-68 h-68 md:w-64 md:h-64 rounded-xl overflow-hidden flex-shrink-0 bg-orange-100 flex items-center justify-center">
+      <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center">
         <Image
           src="/blessedTechie.webp" 
           alt="Blessing Emejulu"
-          width={256}
-          height={256}
+          width={320}
+          height={320}
           className="object-cover w-full h-full rounded-xl"
           priority
         />
