@@ -6,7 +6,7 @@ export default function HeroSection() {
  <section className="flex  flex-col items-center gap-8 px-4 py-12 md:flex-row md:gap-16 md:px-8 lg:px-20">      {/* Left: Text Content */}
       <div className="max-w-xl w-full">
         <h1 className="text-4xl font-bold text-purple-800 mb-2 md:text-5xl lg:text-6xl">
-          I'm Blessing
+            {`I'm Blessing`}
         </h1>
         <h2 className="text-xl text-gray-700 mb-4 font-medium">Software Engineer</h2>
         <hr className="my-4 border-gray-200" />
