@@ -11,7 +11,7 @@ export default function HeroSection() {
         <h2 className="text-xl text-gray-700 mb-4 font-medium">Software Engineer</h2>
         <hr className="my-4 border-gray-200" />
         <p className="text-base text-gray-700 mb-6">
-       I'm a software engineer who believes tech should solve problems, not create them. My mission is to build solutions that are not only clean and scalable but also genuinely useful. When I'm not debugging or designing smoother user experiences, you'll find me sharing what I've learned through writing, teaching, and connecting with other builders. This blog is my space to share the lessons, projects, and stories from my journey in tech. Let's connect and build something cool together!
+       {`I'm a software engineer who believes tech should solve problems, not create them. My mission is to build solutions that are not only clean and scalable but also genuinely useful. When I'm not debugging or designing smoother user experiences, you'll find me sharing what I've learned through writing, teaching, and connecting with other builders. This blog is my space to share the lessons, projects, and stories from my journey in tech. Let's connect and build something cool together!`}
         </p>
         {/* Social Icons */}
         <div className="flex gap-6 mt-4">
