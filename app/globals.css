@@ -25,3 +25,23 @@ body {
   font-family: var(--font-mono), Arial, Helvetica, sans-serif;
 
 }
+
+.gradient-underline {
+  text-decoration: none;
+  background-image: linear-gradient(to right, #8367C7, #5603AD);
+  background-size: 0% 2px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 300ms ease-in-out;
+}
+
+.gradient-underline:hover {
+  background-size: 100% 2px;
+}
+
+
+.gradient-text {
+background-image: linear-gradient(to right, #8367C7, #5603AD);
+background-position-x: text;
+color: transparent;
+}

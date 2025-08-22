@@ -5,9 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Sun, Moon } from "lucide-react"; 
-import { Geist_Mono as GeistMonoFont } from "next/font/google";
 
-const geistMono = GeistMonoFont({ subsets: ["latin"] });
 
 export default function NavBar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,14 +29,14 @@ export default function NavBar() {
         </div>
 
         {/* Links + Toggle */}
-        <div className={`${geistMono.className} flex items-center gap-6`}>
-            <Link href="/articles" className="text-purple-900 hover:underline">
+        <div className={`flex items-center gap-6`}>
+            <Link href="/articles" className="font-bold text-[#5603AD] gradient-underline">
               Articles
             </Link>
-            <Link href="/projects" className="text-purple-900 hover:underline">
+            <Link href="/projects" className="font-bold text-[#5603AD] gradient-underline">
               Projects
             </Link>
-            <Link href="/contact" className="text-purple-900 hover:underline">
+            <Link href="/contact" className="font-bold text-[#5603AD] gradient-underline">
               Contact
             </Link>
 

@@ -32,7 +32,7 @@ export default function LeadershipSection() {
           href={role.link} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="hover:underline"
+          className="gradient-underline"
         >
           {role.title}
         </a>
