@@ -27,12 +27,11 @@ export default function LeadershipSection() {
       <ul className="space-y-8">
   {leadership.map((role, idx) => (
     <li key={idx}>
-      <h3 className="text-lg font-semibold text-purple-800 mb-1">
+      <h3 className="font-bold text-[#5603AD] hover:text-[#8367C7]">
         <a 
           href={role.link} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="gradient-underline"
         >
           {role.title}
         </a>
