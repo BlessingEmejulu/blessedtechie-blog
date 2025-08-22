@@ -1,15 +1,12 @@
-// components/NavBar.tsx
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { Sun, Moon } from "lucide-react"; 
-
+import { useTheme } from "next-themes";
 
 export default function NavBar() {
-  const [darkMode, setDarkMode] = useState(false);
-
+  const { theme, setTheme } = useTheme();
   return (
    <nav
   className="sticky top-0 w-full border-t-4 border-transparent bg-white
@@ -41,16 +38,16 @@ export default function NavBar() {
             </Link>
 
             {/* Toggle Switch */}
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="w-8 h-8 flex items-center rounded-full px-1 transition-all duration-300 bg-purple-800"
-            >
-              {darkMode ? (
-                <Moon className="text-yellow-300 w-6 h-6" />
-              ) : (
-                <Sun className="text-yellow-400 w-6 h-6" />
-              )}
-            </button>
+           <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="w-8 h-8 flex items-center justify-center rounded-full px-1 transition-all duration-300 bg-[#5603AD]"
+        >
+          {theme === "dark" ? (
+            <Moon className="text-[#F0FFF1] w-6 h-6" />
+          ) : (
+            <Sun className="text-[#C2F8CB] w-6 h-6" />
+          )}
+        </button>
         </div>
     </div>
 </nav>
