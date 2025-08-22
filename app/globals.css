@@ -42,6 +42,7 @@ body {
 
 .gradient-text {
 background-image: linear-gradient(to right, #8367C7, #5603AD);
-background-position-x: text;
+background-clip: text;
+-webkit-background-clip: text;
 color: transparent;
 }
