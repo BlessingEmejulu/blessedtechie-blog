@@ -11,11 +11,11 @@ export default function HeroSection() {
         <h1 className="text-4xl font-bold gradient-text mb-2 md:text-5xl lg:text-6xl">
           {`I'm Blessing`}
         </h1>
-        <h2 className="text-xl text-gray-700 dark:text-gray-300 mb-4 font-medium">
+        <h2 className="text-xl text-gray-700 mb-4 font-medium">
           <Typewriter />
         </h2>
-        <hr className="my-4 border-gray-200 dark:border-gray-700" />
-        <p className="text-base text-gray-700 dark:text-gray-300 mb-6">
+        <hr className="my-4 border-gray-200" />
+        <p className="text-base text-gray-700 mb-6">
           {`I'm a software engineer who believes tech should solve problems, not create them. My mission is to build solutions that are not only clean and scalable but also genuinely useful. When I'm not debugging or designing smoother user experiences, you'll find me sharing what I've learned through writing, teaching, and connecting with other builders. This blog is my space to share the lessons, projects, and stories from my journey in tech. Let's connect and build something cool together!`}
         </p>
 
@@ -24,28 +24,28 @@ export default function HeroSection() {
           <a
             href="https://www.linkedin.com/in/blessing-emejulu-63850a248/"
             aria-label="LinkedIn"
-            className="text-[#8367C7] hover:text-[#5603AD] dark:text-purple-400 dark:hover:text-purple-300 transition-colors"
+            className="text-[#8367C7] hover:text-[#5603AD]"
           >
             <Linkedin size={24} />
           </a>
           <a
             href="https://github.com/BlessingEmejulu"
             aria-label="GitHub"
-            className="text-[#8367C7] hover:text-[#5603AD] dark:text-purple-400 dark:hover:text-purple-300 transition-colors"
+            className="text-[#8367C7] hover:text-[#5603AD]"
           >
             <Github size={24} />
           </a>
           <a
             href="https://www.facebook.com/blessing.emejulu.33"
             aria-label="Facebook"
-            className="text-[#8367C7] hover:text-[#5603AD] dark:text-purple-400 dark:hover:text-purple-300 transition-colors"
+            className="text-[#8367C7] hover:text-[#5603AD]"
           >
             <Facebook size={24} />
           </a>
           <a
             href="https://x.com/blessedtechie"
             aria-label="X"
-            className="text-[#8367C7] hover:text-[#5603AD] dark:text-purple-400 dark:hover:text-purple-300 transition-colors"
+            className="text-[#8367C7] hover:text-[#5603AD]"
           >
             <X size={24} />
           </a>
@@ -53,9 +53,9 @@ export default function HeroSection() {
       </div>
 
       {/* Right: Profile Image */}
-      <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl overflow-hidden flex-shrink-0 bg-gray-200 dark:bg-gray-700">
+      <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center">
         <Image
-          src="/blessedechie.webp"
+          src="/blessedtechie.webp"
           alt="Blessing Emejulu"
           width={320}
           height={320}
