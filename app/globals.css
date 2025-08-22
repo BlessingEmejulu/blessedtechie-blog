@@ -11,7 +11,7 @@
 /* Dark mode variables */
 .dark {
   --background: #121212; /* A dark gray for the background */
-  --foreground: #C2F8CB; /* Light mint green for text */
+  --foreground: #fff; /* Light mint green for text */
   --link-color: #B3E9C7; /* Light mint green for links */
   --accent-color: #8367C7; /* Muted purple for accents */
 }
