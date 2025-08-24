@@ -16,6 +16,7 @@ export default function NavBar() {
     <div className="flex w-full items-center justify-between mx-auto max-w-7xl px-4">
         {/* Logo */}
         <div className="flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/blessingemejulu.png"
             alt="Logo"
@@ -23,6 +24,9 @@ export default function NavBar() {
             height={40}
             className="rounded"
           />
+          <p className="text-2xl font-bold gradient-text">
+            BlessedTechie</p>  
+          </Link>
         </div>
 
         {/* Links + Toggle */}
