@@ -20,7 +20,7 @@ export default function LeadershipSection() {
 
   return (
     <section className="gap-8 px-4 py-12 md:flex-row md:gap-16 md:px-8 lg:px-20">
-      <h2 className="text-sm font-semibold text-gray-700 tracking-widest mb-6 flex items-center gap-2">
+      <h2 className="text-xl font-bold text-gray-700 uppercase tracking-widest mb-6 flex items-center gap-2">
         LEADERSHIP
         <span className="flex-1 border-t border-gray-200 ml-2" />
       </h2>

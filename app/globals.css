@@ -2,18 +2,18 @@
 
 /* Light mode variables */
 :root {
-  --background: #F0FFF1; /* Light pale green */
-  --foreground: #8367C7; /* Muted purple */
-  --link-color: #5603AD; /* Dark purple for links and titles */
-  --accent-color: #B3E9C7; /* Mint green for accents */
+  --background: #ffffff;
+  --foreground: #8367C7;
+  --link-color: #5603AD;
+  --accent-color: #B3E9C7;
 }
 
 /* Dark mode variables */
 .dark {
-  --background: #121212; /* A dark gray for the background */
-  --foreground: #fff; /* Light mint green for text */
-  --link-color: #B3E9C7; /* Light mint green for links */
-  --accent-color: #8367C7; /* Muted purple for accents */
+  --background: #201A24;
+  --foreground: #C2F8CB;
+  --link-color: #B3E9C7;
+  --accent-color: #8367C7;
 }
 
 body {
