@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+  "dev:sanity": "sanity dev",
+  "build:sanity": "sanity build",
+  "deploy:sanity": "sanity deploy",
+  "deploy:graphql": "sanity graphql deploy"
   },
   "dependencies": {
     "@sanity/image-url": "^1.1.0",
