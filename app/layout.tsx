@@ -35,10 +35,10 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > 
-            <NavBar />
-            {children}
-            <Footer />
+        >
+          <NavBar />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -1,9 +1,29 @@
+// app/articles/page.tsx
+import { client } from "@/lib/sanity.client";
+import { groq } from "next-sanity";
+import ArticleCard from "@/components/ui/ArticleCard";
+import { Post } from "@/interfaces/post";
 
-export default function ArticlesPage() {
+const query = groq`
+  *[_type == "post"] | order(publishedAt desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    "imageUrl": mainImage.asset->url,
+    body,
+  }
+`;
+
+export default async function ArticlesPage() {
+  const posts: Post[] = await client.fetch(query);
+
   return (
-    <div>
-      <h1>Articles</h1>
-      <p>This is the articles page.</p>
+    <div className="container mx-auto px-4 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <ArticleCard key={post._id} article={post} />
+        ))}
+      </div>
     </div>
   );
 }
