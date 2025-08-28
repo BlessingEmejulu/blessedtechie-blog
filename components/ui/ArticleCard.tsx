@@ -1,3 +1,4 @@
+// components/ArticleCard.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { Post } from '@/interfaces/post';
@@ -6,10 +7,12 @@ interface ArticleCardProps {
   article: Post;
 }
 
-const getFirstParagraph = (body: any[]): string => {
-  if (!body) return "";
-  const firstBlock = body.find(block => block._type === 'block');
-  if (firstBlock && firstBlock.children) {
+const getFirstParagraph = (body: any): string => {
+  if (!Array.isArray(body)) {
+    return "";
+  }
+  const firstBlock = body.find(block => block && block._type === 'block');
+  if (firstBlock && Array.isArray(firstBlock.children)) {
     return firstBlock.children.map((span: any) => span.text).join('');
   }
   return "";
@@ -24,14 +27,14 @@ export default function ArticleCard({ article }: ArticleCardProps) {
 
   return (
     <div className="bg-[var(--background)] rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-      <div className="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-4">
+      <div className="relative w-full h-48 bg-gray-100 dark:bg-gray-800">
         {article.imageUrl && (
           <Image
             src={article.imageUrl}
             alt={article.title}
-            width={200}
-            height={200}
-            objectFit="contain"
+            fill
+            className="object-contain p-2"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         )}
       </div>

@@ -1,4 +1,3 @@
-// app/articles/page.tsx
 import { client } from "@/lib/sanity.client";
 import { groq } from "next-sanity";
 import ArticleCard from "@/components/ui/ArticleCard";
@@ -8,7 +7,7 @@ const query = groq`
   *[_type == "post"] | order(publishedAt desc) {
     _id,
     title,
-    "slug": slug.current,
+    slug,
     "imageUrl": mainImage.asset->url,
     body,
   }
@@ -16,6 +15,14 @@ const query = groq`
 
 export default async function ArticlesPage() {
   const posts: Post[] = await client.fetch(query);
+
+  if (!posts || posts.length === 0) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <p className="text-center text-lg text-gray-500">No articles found.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-12">
