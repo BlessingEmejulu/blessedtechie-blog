@@ -3,7 +3,7 @@
 /* Light mode variables */
 :root {
   --background: #ffffff;
-  --foreground: #8367C7;
+  --foreground: #0f0f0f;
   --link-color: #5603AD;
   --accent-color: #B3E9C7;
 }
@@ -11,7 +11,7 @@
 /* Dark mode variables */
 .dark {
   --background: #19002b;
-  --foreground: #C2F8CB;
+  --foreground:  #f7f7f7;
   --link-color: #B3E9C7;
   --accent-color: #8367C7;
 }

@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${firaCode.variable}`} suppressHydrationWarning>
       <body
-        className="h-full dark:selection:bg-purple-500"
+        className="dark:selection:bg-purple-500"
       >
         <ThemeProvider
           attribute="class"
@@ -42,7 +42,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
-          {children}
+          <main className="pt-20">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -7,7 +7,7 @@ import { ThemeSwitch } from "@/components/ui/ThemeSwitch";
 export default function NavBar() {
   return (
    <nav
-    className="sticky top-0 w-full border-t-4 border-transparent
+    className="fixed z-50 top-0 w-full border-t-4 bg-background/95 backdrop-blur-sm
                bg-[length:100%_4px] bg-top bg-no-repeat
                flex items-center justify-between px-6 py-3 shadow-md shadow-purple-500/20"
 >
