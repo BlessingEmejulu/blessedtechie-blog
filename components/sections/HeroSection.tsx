@@ -24,25 +24,31 @@ export default function HeroSection() {
           <a
             href="https://www.linkedin.com/in/blessing-emejulu-63850a248/"
             aria-label="LinkedIn"
+            className="text-[#8367C7] hover:text-[#5603AD]"
+
           >
             <Linkedin size={24} />
           </a>
           <a
             href="https://github.com/BlessingEmejulu"
             aria-label="GitHub"
+            className="text-[#8367C7] hover:text-[#5603AD]"
+
           >
             <Github size={24} />
           </a>
           <a
             href="https://www.facebook.com/blessing.emejulu.33"
             aria-label="Facebook"
-            // className="text-[#8367C7] hover:text-[#5603AD]"
+            className="text-[#8367C7] hover:text-[#5603AD]"
           >
             <Facebook size={24} />
           </a>
           <a
             href="https://x.com/blessedtechie"
             aria-label="X"
+            className="text-[#8367C7] hover:text-[#5603AD]"
+
           >
             <X size={24} />
           </a>
@@ -50,7 +56,7 @@ export default function HeroSection() {
       </div>
 
       {/* Right: Profile Image */}
-      <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center">
+      <div className="w-72 h-72 md:w-80 md:h-80 rounded-xl overflow-hidden flex-shrink-0 flex items-center justify-center mx-auto md:mx-0">
         <Image
           src="/blessedtechie.webp"
           alt="Blessing Emejulu"
