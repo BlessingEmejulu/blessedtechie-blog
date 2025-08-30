@@ -20,14 +20,14 @@ export default function LeadershipSection() {
 
   return (
     <section className="gap-8 px-4 py-12 md:flex-row md:gap-16 md:px-8 lg:px-20">
-      <h2 className="text-xl font-bold text-gray-700 uppercase tracking-widest mb-6 flex items-center gap-2">
+      <h2 className="text-xl font-bold uppercase tracking-widest mb-6 flex items-center gap-2">
         LEADERSHIP
-        <span className="flex-1 border-t border-gray-200 ml-2" />
+        <span className="flex-1 border-t ml-2" />
       </h2>
       <ul className="space-y-8">
   {leadership.map((role, idx) => (
     <li key={idx}>
-      <h3 className="font-bold text-[#5603AD] hover:text-[#8367C7]">
+      <h3 className="font-bold">
         <a 
           href={role.link} 
           target="_blank" 
@@ -36,7 +36,7 @@ export default function LeadershipSection() {
           {role.title}
         </a>
       </h3>
-      <p className="text-gray-700">{role.description}</p>
+      <p>{role.description}</p>
     </li>
   ))}
 </ul>

@@ -19,7 +19,7 @@ export default async function ArticlesPage() {
   if (!posts || posts.length === 0) {
     return (
       <div className="container mx-auto px-4 py-12">
-        <p className="text-center text-lg text-gray-500">No articles found.</p>
+        <p className="text-center text-lg">No articles found.</p>
       </div>
     );
   }

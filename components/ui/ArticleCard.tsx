@@ -26,8 +26,8 @@ export default function ArticleCard({ article }: ArticleCardProps) {
   const firstParagraph = getFirstParagraph(article.body);
 
   return (
-    <div className="bg-[var(--background)] rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-      <div className="relative w-full h-48 bg-gray-100 dark:bg-gray-800">
+    <div className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+      <div className="relative w-full h-48 ">
         {article.imageUrl && (
           <Image
             src={article.imageUrl}
@@ -39,12 +39,12 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         )}
       </div>
       <div className="p-4">
-        <h3 className="text-lg font-bold text-[#8367C7] dark:text-[#C2F8CB] mb-2">
+        <h3 className="text-lg font-bold mb-2">
           <Link href={`/articles/${article.slug.current}`} className="hover:underline">
             {article.title}
           </Link>
         </h3>
-        <p className="text-sm text-gray-600 dark:text-[#8367C7] line-clamp-3">
+        <p className="text-sm line-clamp-3">
           {firstParagraph}
         </p>
       </div>

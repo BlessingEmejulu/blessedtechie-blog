@@ -10,11 +10,11 @@ export default async function ProjectsSection() {
     return (
         <section className="container mx-auto px-4 py-12 md:px-8">
             <div className="flex items-center justify-between mb-8">
-                <h2 className="text-xl font-bold tracking-widest text-gray-700 uppercase">
+                <h2 className="text-xl font-bold tracking-widest uppercase">
                     Latest Projects
                 </h2>
-                <span className="flex-1 border-t border-gray-200" />
-                <Link href="/projects" className="font-bold text-sm text-purple-700 gradient-underline">
+                <span className="flex-1 border-t" />
+                <Link href="/projects" className="font-bold text-sm gradient-underline">
                     View All Projects
                 </Link>
             </div>

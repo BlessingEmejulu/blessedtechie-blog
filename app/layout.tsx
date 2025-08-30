@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fira_Code } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import NavBar from "@/components/ui/NavBar";
 import Footer from "@/components/ui/Footer";
@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Blessing Emejulu",
   description: "A blog where I share my journey as Software Engineer",
@@ -26,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${firaCode.variable}`} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-300`}
+        className="h-full bg-amber-50 text-indigo-950 dark:bg-slate-950 dark:text-amber-50 dark:selection:bg-purple-500"
       >
         <ThemeProvider
           attribute="class"
