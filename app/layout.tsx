@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Fira_Code } from "next/font/google";
-import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import { ThemeProvider } from "next-themes";
 import NavBar from "@/components/ui/NavBar";
 import Footer from "@/components/ui/Footer";
 import "./globals.css";
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${firaCode.variable}`} suppressHydrationWarning>
       <body
-        className="h-full bg-amber-50 text-indigo-950 dark:bg-slate-950 dark:text-amber-50 dark:selection:bg-purple-500"
+        className="h-full dark:selection:bg-purple-500"
       >
         <ThemeProvider
           attribute="class"

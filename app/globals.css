@@ -10,7 +10,7 @@
 
 /* Dark mode variables */
 .dark {
-  --background: #201A24;
+  --background: #19002b;
   --foreground: #C2F8CB;
   --link-color: #B3E9C7;
   --accent-color: #8367C7;
@@ -18,6 +18,9 @@
 
 body {
   font-family: var(--font-mono), Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  transition: background 0.3s, color 0.3s;
 }
 
 .gradient-underline {
