@@ -11,7 +11,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className="fixed z-50 top-0 w-full border-t-4 bg-background/95 backdrop-blur-sm
+      className="fixed z-50 top-0 w-full border-t-4 bg-[var(--background)] backdrop-blur-lg
                  bg-[length:100%_4px] bg-top bg-no-repeat
                  flex items-center justify-between px-4 py-3 shadow-md shadow-purple-500/20"
     >
@@ -55,7 +55,7 @@ export default function NavBar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-sm shadow-md md:hidden">
+        <div className="absolute top-full left-0 w-full bg-[var(--background)] backdrop-blur-lg shadow-md md:hidden">
           <div className="flex flex-col items-center gap-4 py-4">
             <Link
               href="/articles"
