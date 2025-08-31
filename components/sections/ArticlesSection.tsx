@@ -1,4 +1,3 @@
-// components/ArticlesSection.tsx
 import ArticleCard from "@/components/ui/ArticleCard";
 import Link from 'next/link';
 import { getLatestArticles } from "@/sanity/schemas/sanity-utils";
@@ -6,6 +5,9 @@ import { Post } from "@/interfaces/post";
 
 export default async function ArticlesSection() {
     const articles: Post[] = await getLatestArticles();
+
+    // For debugging: Check the server console to see what's being fetched.
+    console.log("Fetched articles:", articles);
 
     return (
         <section className="container mx-auto px-4 py-12 md:px-8">
@@ -22,7 +24,7 @@ export default async function ArticlesSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {articles && articles.length > 0 ? (
                     articles.map(article => (
-                        <ArticleCard key={article._id}, article={article.title} />
+                        <ArticleCard key={article._id} article={article} />
                     ))
                 ) : (
                     <p className="col-span-full">No articles found. Check the Sanity query or ensure articles are published.</p>
