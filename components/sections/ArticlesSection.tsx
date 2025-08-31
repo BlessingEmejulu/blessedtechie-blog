@@ -20,9 +20,13 @@ export default async function ArticlesSection() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {articles.map(article => (
-                    <ArticleCard key={article._id} article={article} />
-                ))}
+                {articles && articles.length > 0 ? (
+                    articles.map(article => (
+                        <ArticleCard key={article._id}, article={article.title} />
+                    ))
+                ) : (
+                    <p className="col-span-full">No articles found. Check the Sanity query or ensure articles are published.</p>
+                )}
             </div>
         </section>
     );
