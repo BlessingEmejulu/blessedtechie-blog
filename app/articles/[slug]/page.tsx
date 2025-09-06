@@ -1,13 +1,21 @@
-
 import { client } from "@/lib/sanity.client";
 import { groq } from "next-sanity";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 interface Props {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
+}
+
+import type { TypedObject } from "@portabletext/types";
+
+interface Post {
+  title: string;
+  slug: string;
+  imageUrl: string | null;
+  publishedAt: string;
+  body: TypedObject[];
 }
 
 const query = groq`
@@ -21,10 +29,11 @@ const query = groq`
 `;
 
 export default async function PostPage({ params }: Props) {
-  const post = await client.fetch(query, { slug: params.slug });
+  const { slug } = await params; // Await params
+  const post = await client.fetch<Post>(query, { slug });
 
   if (!post) {
-    return <div>404 - Post not found</div>;
+    notFound();
   }
 
   return (
